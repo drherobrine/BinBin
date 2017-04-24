@@ -29,6 +29,11 @@ print("Type in a number between 0 and 255. Press Ctrl + C to exit.")
 while True:
     decNum = int(input("Input a number between 0 and 255 "))
     if decNum > 255:
-        print("This number is too big. Type in a number less than 256.")
-        decNum = int(input("Input a number between 0 and 255 "))
+        while decNum > 255:
+            print("This number is too big. Type in a number less than 256.")
+            decNum = int(input("Input a number between 0 and 255 "))
+    elif decNum < 0:
+        while decNum < 0:
+            print("This number is too small. Type in a number greater than 0.")
+            decNum = int(input("Input a number between 0 and 255 "))
     binFunc()
